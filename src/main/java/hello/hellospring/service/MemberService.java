@@ -28,4 +28,17 @@ public class MemberService {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         });
     }
+
+
+    /**
+     * 전체 회원 조회
+     */
+    public List<Member> findMembers() { //전체회원 조회
+        return memberRepository.findAll();
+    }
+
+    
+    public Optional<Member> findOnd(Long memberId) { //멤버 아이디를 반환해서 찾기
+        return memberRepository.findById(memberId);
+    }
 }
