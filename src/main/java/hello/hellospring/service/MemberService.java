@@ -23,6 +23,7 @@ public class MemberService {
      * 회원가입
      */
     public Long join(Member member) {
+
         //같은 이름이 있는 중복 회원 X 원래는 같은 이름이 있을수는 있지만 예시니깐 임의로 정함
         validataDuplicateMember(member); //중복회원 검증
 
